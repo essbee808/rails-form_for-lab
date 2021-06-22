@@ -13,4 +13,10 @@ class SchoolClassesController < ApplicationController
 
   def update
   end
+
+  private
+
+  def school_class_params
+    params.require(:school_class).permit(:title, :room_number)
+  end
 end
